@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --admin-sidebar-width: 240px;
+  --admin-header-height: 56px;
+  --navy: #0A1628;
+  --gold: #D4AF37;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+}
+
+@layer components {
+  /* ─── Layout ─── */
+  .admin-shell {
+    @apply flex h-screen overflow-hidden;
+  }
+
+  .admin-sidebar {
+    @apply w-[240px] shrink-0 bg-[#0A1628] text-white/80 flex flex-col h-full overflow-y-auto;
+  }
+
+  .admin-main {
+    @apply flex-1 flex flex-col overflow-hidden;
+  }
+
+  .admin-content {
+    @apply flex-1 overflow-y-auto p-6;
+  }
+
+  /* ─── Navigation ─── */
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium
+    transition-all duration-150 cursor-pointer;
+  }
+
+  .nav-item-active {
+    @apply bg-white/10 text-white;
+  }
+
+  .nav-item-inactive {
+    @apply text-white/55 hover:bg-white/5 hover:text-white;
+  }
+
+  .nav-section {
+    @apply text-[10px] font-semibold text-white/25 uppercase tracking-wider px-4 mb-2 mt-5;
+  }
+
+  /* ─── Cards ─── */
+  .stat-card {
+    @apply bg-white rounded-xl p-5 shadow-sm border border-gray-100;
+  }
+
+  .content-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+  }
+
+  /* ─── Badges ─── */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold;
+  }
+
+  .badge-new      { @apply badge bg-blue-50 text-blue-700; }
+  .badge-contacted { @apply badge bg-purple-50 text-purple-700; }
+  .badge-sitevisit { @apply badge bg-amber-50 text-amber-700; }
+  .badge-negotiation { @apply badge bg-orange-50 text-orange-700; }
+  .badge-closed   { @apply badge bg-green-50 text-green-700; }
+  .badge-lost     { @apply badge bg-red-50 text-red-700; }
+
+  /* ─── Buttons ─── */
+  .btn-admin {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2
+    text-sm font-medium transition-all duration-150 cursor-pointer disabled:opacity-50;
+  }
+
+  .btn-primary-admin {
+    @apply btn-admin bg-[#0A1628] text-white hover:bg-[#162340] shadow-sm;
+  }
+
+  .btn-secondary-admin {
+    @apply btn-admin bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm;
+  }
+
+  .btn-danger-admin {
+    @apply btn-admin bg-red-600 text-white hover:bg-red-700 shadow-sm;
+  }
+
+  .btn-gold-admin {
+    @apply btn-admin bg-[#D4AF37] text-[#0A1628] font-semibold hover:bg-[#B8961E];
+  }
+
+  /* ─── Forms ─── */
+  .input-admin {
+    @apply w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900
+    placeholder:text-gray-400 outline-none focus:border-[#0A1628] focus:ring-2 focus:ring-[#0A1628]/8
+    transition-all duration-150;
+  }
+
+  .label-admin {
+    @apply block text-xs font-medium text-gray-700 mb-1;
+  }
+
+  .select-admin {
+    @apply input-admin appearance-none pr-8;
+  }
+
+  /* ─── Table ─── */
+  .table-admin {
+    @apply w-full text-sm;
+  }
+
+  .table-admin th {
+    @apply text-left text-xs font-semibold text-gray-500 uppercase tracking-wider
+    px-4 py-3 bg-gray-50 border-b border-gray-100;
+  }
+
+  .table-admin td {
+    @apply px-4 py-3 border-b border-gray-50 text-gray-700;
+  }
+
+  .table-admin tr:hover td {
+    @apply bg-gray-50;
+  }
+
+  /* ─── Scrollbar ─── */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.15) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 4px; }
+}

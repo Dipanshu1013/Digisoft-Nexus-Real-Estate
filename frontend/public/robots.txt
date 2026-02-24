@@ -1,0 +1,33 @@
+# DigiSoft Nexus — robots.txt (Phase 8 SEO)
+User-agent: *
+Allow: /
+
+# Block admin and private routes
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /thank-you
+
+# Allow important marketing paths explicitly
+Allow: /projects/
+Allow: /properties/
+Allow: /campaigns/
+Allow: /blog/
+Allow: /calculator/
+
+# Sitemap location
+Sitemap: https://digisoftnexus.com/sitemap.xml
+
+# Crawl-delay for courtesy
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

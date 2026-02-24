@@ -1,0 +1,97 @@
+/* =============================================
+   DigiSoft Nexus — Phase 3 CSS Additions
+   Append these to your globals.css
+   ============================================= */
+
+/* ── Gradient fixes ──────────────────────────── */
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37, #B8960C);
+}
+.bg-gradient-navy {
+  background: linear-gradient(135deg, #0A1628, #142240);
+}
+.shadow-gold {
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+/* ── Additional Button Variants ──────────────── */
+.btn-outline-gold {
+  @apply border-2 border-gold text-gold hover:bg-gold hover:text-navy transition-all duration-200 font-syne font-semibold rounded-xl px-5 py-2.5 inline-flex items-center gap-2;
+}
+
+/* ── Popup shadow ────────────────────────────── */
+.shadow-popup {
+  box-shadow: 0 25px 80px rgba(10, 22, 40, 0.35), 0 8px 30px rgba(10, 22, 40, 0.15);
+}
+
+/* ── Prose luxury (blog/detail pages) ──────────── */
+.prose-luxury h2 {
+  @apply font-syne font-semibold text-xl text-navy mt-8 mb-3;
+}
+.prose-luxury h3 {
+  @apply font-syne font-semibold text-base text-navy mt-6 mb-2;
+}
+.prose-luxury p {
+  @apply text-dark-grey leading-[1.8] mb-4 text-sm md:text-base;
+}
+.prose-luxury ul {
+  @apply space-y-2 mb-4 pl-0 list-none;
+}
+.prose-luxury li {
+  @apply flex items-start gap-2 text-sm text-dark-grey;
+}
+.prose-luxury strong {
+  @apply text-navy font-semibold;
+}
+
+/* ── Success color ────────────────────────────── */
+.text-success {
+  color: #16A34A;
+}
+.bg-success {
+  background-color: #16A34A;
+}
+.bg-success\/15 {
+  background-color: rgb(22 163 74 / 0.15);
+}
+
+/* ── Skeleton loader ─────────────────────────── */
+.skeleton {
+  @apply bg-navy/8 animate-pulse rounded;
+}
+
+/* ── Image hover zoom (used on property cards) ── */
+.img-hover-zoom img {
+  @apply transition-transform duration-700;
+}
+.img-hover-zoom:hover img {
+  @apply scale-110;
+}
+
+/* ── Line clamp ──────────────────────────────── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Form error ──────────────────────────────── */
+.form-error {
+  @apply text-red-500 text-xs mt-1 font-syne;
+}
+.border-error {
+  @apply border-red-400 !important;
+}
+
+/* ── Rounded sizes ───────────────────────────── */
+.rounded-xl3 { border-radius: 16px; }
+.rounded-xl4 { border-radius: 20px; }
+
+/* ── Dark grey ───────────────────────────────── */
+.bg-dark-grey { background-color: #374151; }
+.text-dark-grey { color: #374151; }
+.text-mid-grey  { color: #6B7280; }
+
+/* ── Backdrop blur ───────────────────────────── */
+.backdrop-blur-sm { backdrop-filter: blur(4px); }
