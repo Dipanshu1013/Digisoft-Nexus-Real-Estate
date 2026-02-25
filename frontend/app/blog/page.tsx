@@ -5,6 +5,7 @@ import { Calendar, Clock, Tag, ArrowRight, Search } from 'lucide-react'
 import SiteLayout from '@/components/layout/SiteLayout'
 import { BLOG_POSTS } from '@/lib/mockData'
 
+
 export const metadata: Metadata = {
   title: 'Real Estate Blog & Insights | Gurugram Property Guide 2026 | DigiSoft Nexus',
   description: 'Expert real estate insights, investment guides, property comparisons, and hyperlocal Gurugram market analysis. Stay informed before you buy.',
